@@ -1,0 +1,40 @@
+import time
+import math
+import random
+
+print "Input public key"
+pk = input()
+print "Input private key"
+pvk = input()
+print "Input text"
+plaintext = raw_input()
+
+def encrypt(plaintext):
+    for list1 in t:
+    cipher = ord(plaintext) - 96
+    return cipher
+
+
+    #for list1 in t:
+    #number = ord(list1) - 96
+    #output.append(number)
+
+a = ''.join(str(e)for e in output)
+print "a = ", a
+
+c = int(a)**pk
+print "c = ", c
+
+m = c%pvk
+print "m = ", m
+
+output2 = []
+for text2 in m:
+    text = chr(text2) - 96
+    output2.append(text)
+
+b = ''.join(str(e)for e in output2)
+print "b = ", b
+
+
+# ------------------------------------------------------------------------------
