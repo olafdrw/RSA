@@ -10,7 +10,7 @@ print "Input text"
 plaintext = raw_input()
 
 def encrypt(plaintext):
-    for list1 in t:
+    for  in t:
     cipher = ord(plaintext) - 96
     return cipher
 
@@ -35,6 +35,3 @@ for text2 in m:
 
 b = ''.join(str(e)for e in output2)
 print "b = ", b
-
-
-# ------------------------------------------------------------------------------
