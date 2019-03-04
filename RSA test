@@ -29,18 +29,3 @@ for text2 in m:
 
 b = ''.join(str(e)for e in output2)
 print "b = ", b
-
-
-
-
-
-
-
-
-#output2 = []
-#for character2 in m:
-    #number2 = chr(m) - 96
-    #output2.append(number2)
-
-#b = ''.join(str(e)for e in output2)
-#print "b = ", b
