@@ -21,11 +21,3 @@ c = int(a)**pk
 
 m = c%pvk
 print "m = ", m
-
-output2 = []
-for text2 in m:
-    text = chr(text2) - 96
-    output2.append(text)
-
-b = ''.join(str(e)for e in output2)
-print "b = ", b
