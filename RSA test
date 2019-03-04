@@ -6,17 +6,33 @@ pk = input()
 print "Input private key"
 pvk = input()
 print "Input text"
-t = raw_input()
+plaintext = raw_input()
 
-output = []
-for list1 in t:
-    number = ord(list1) - 96
-    output.append(number)
+def encrypt(plaintext):
+    cipher = [(ord(char) ** key) % pk for char in plaintext]
+    return cipher
 
-a = ''.join(str(e)for e in output)
-print "a = ", a
+#def decrypt(cipher):
 
-c = int(a)**pk
 
-m = c%pvk
-print "m = ", m
+print cipher
+
+
+
+
+
+
+
+
+#output = []
+#for list1 in t:
+#    number = ord(list1) - 96
+#    output.append(number)
+
+#a = ''.join(str(e)for e in output)
+#print "a = ", a
+
+#c = int(a)**pk
+
+#m = c%pvk
+#print "m = ", m
