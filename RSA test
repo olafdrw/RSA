@@ -17,7 +17,8 @@ def encrypt(plaintext):
 
 print cipher
 
-
+def decrypt(cipher):
+    
 
 
 
