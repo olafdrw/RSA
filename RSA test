@@ -14,7 +14,20 @@ def encrypt(plaintext):
 
 print(encrypt(plaintext))
 
-#def decrypt(cipher):
+# maybe include hashed intermediate text
+
+def decrypt(cipher):
+    text = "".join(str(chr(int)) for int in cipher)
+    return text
+
+print(decrypt(cipher))
+
+
+
+
+
+
+
 
 
 
