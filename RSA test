@@ -9,7 +9,6 @@ print "Input text"
 plaintext = raw_input()
 
 def encrypt(plaintext):
-    cipher = []
     cipher = ((ord(char) ** key) % pk for char in plaintext)
     return cipher
 
