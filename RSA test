@@ -9,9 +9,11 @@ print "Input text"
 plaintext = raw_input()
 
 def encrypt(plaintext):
-    
+    for char in e:
+         cipher = ord(plaintext)
 
-#def decrypt(cipher):
+
+def decrypt(cipher):
 
 print cipher
 
