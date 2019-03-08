@@ -17,11 +17,12 @@ print "C = ", c
 
 # maybe include hashed intermediate text
 
+# re-write function! 
 def decrypt(cipher):
     text = "".join(str(chr(int)) for int in cipher)
     return text
 
-d = decrypt(cipher)
+d = decrypt(c)
 print "D = ", d
 
 
