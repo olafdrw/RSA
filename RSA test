@@ -12,7 +12,8 @@ def encrypt(plaintext):
     cipher = "".join(str(ord(char)) for char in plaintext)
     return cipher
 
-print(encrypt(plaintext))
+c = encrypt(plaintext)
+print "C = ", c
 
 # maybe include hashed intermediate text
 
@@ -20,7 +21,10 @@ def decrypt(cipher):
     text = "".join(str(chr(int)) for int in cipher)
     return text
 
-print(decrypt(cipher))
+d = decrypt(cipher)
+print "D = ", d
+
+
 
 
 
