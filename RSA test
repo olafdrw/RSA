@@ -13,13 +13,17 @@ def encrypt(plaintext):
     return cipher
 
 c = encrypt(plaintext)
-print "Cipher message = ", c
+cm = ((int(c)**pk)%pvk)
+
+print "Cipher message = ", cm
+
+
 
 # maybe include hashed intermediate text
 
 # re-write function!
 def decrypt(cipher):
-    text = (str(chr(int)) for int in cipher)
+    text = str(chr(int) for int in c)
     return text
 
 d = decrypt(c)
