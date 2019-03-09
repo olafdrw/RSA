@@ -40,7 +40,6 @@ print "Decrypted message = ", d
 
 
 
-
 #output = []
 #for list1 in t:
 #    number = ord(list1) - 96
