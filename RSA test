@@ -14,11 +14,11 @@ def encrypt(plaintext):
 
 c = encrypt(plaintext)
 
-def message_modulus(cipher):
-    cm = ((int(c)**pk)%pvk for int in cipher)
+def message_modulus(c):
+    cm = (tuple((int(c)**pk)%pvk for int in c))
     return cm
 
-cm = message_modulus(cipher)
+cm = message_modulus(c)
 print "Cipher message = ", cm
 
 # maybe include hashed intermediate text
@@ -30,11 +30,6 @@ def decrypt(cm):
 
 d = decrypt(cm)
 print "Decrypted message = ", d
-
-
-
-
-
 
 
 
