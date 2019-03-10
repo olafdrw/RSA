@@ -15,7 +15,7 @@ def encrypt(plaintext):
 c = encrypt(plaintext)
 
 def message_modulus(c):
-    cm = (tuple((int(c)**pk)%pvk for int in c))
+    cm = (int(c)**pk)%pvk for int in c)
     return cm
 
 cm = message_modulus(c)
