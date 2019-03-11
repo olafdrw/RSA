@@ -1,12 +1,26 @@
 import time
 import math
 
-p = int(input("Select prime number P = "))
-q = int(input("Select prime number Q = "))
+p = int(input("Select prime number p = "))
+q = int(input("Select prime number q = "))
 
-def define_n(p,q):
+def calc_n(p,q):
     n = p*q
     return n
 
-print
+print "n = ", calc_n(p,q)
+
 e = int(input("Select e = "))
+
+def calc_phi(n,p,q):
+    phi = (p-1)*(q-1)
+    return phi
+
+k = int(input("Select integer k = "))
+
+def private_key(n,phi,e,k):
+    d = (k*phi + 1)/e
+    return d
+
+print "Public key n = ", calc_n(p,q)
+print "Private key d = ", private_key(n,phi,e,k)
