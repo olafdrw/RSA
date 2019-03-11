@@ -26,6 +26,8 @@ def private_key(n,phi,e,k):
     d = (k*phi + 1)/e
     return d
 
+d = private_key(n,phi,e,k)
+
 print "Public key n = ", calc_n(p,q)
 print "Private key d = ", private_key(n,phi,e,k)
 
@@ -33,20 +35,18 @@ print "Private key d = ", private_key(n,phi,e,k)
 
 plaintext = raw_input("Enter plaintext: ")
 
-def convert_to_ascii(plaintext):
-    for char in plaintext:
-        num = ord(char)
-    return num
+def encrypt(e,n,plaintext):
+    data = [(ord(char)**e) % n for char in plaintext]
+    return data
 
-num = convert_to_ascii(plaintext)
+data = encrypt(e,n,plaintext)
 
-def encrypt(num,e,n):
-    encrypted_data = (num**e) % n
-    return encrypted_data
-
-data = encrypt(num,e,n)
-
-print "Encrypted data = ", encrypt(num,e,n)
+print "Encrypted data = ", encrypt(e,n,plaintext)
 
 def decrypt(data,d,n):
-    for 
+    decrypted_data = [chr((char ** d) % n) for char in data]
+    return ''.join(decrypted_data)
+
+text = decrypt(data,d,n)
+
+print "Decrypted data = ", decrypt(data,d,n)
