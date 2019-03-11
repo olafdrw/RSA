@@ -8,6 +8,8 @@ def calc_n(p,q):
     n = p*q
     return n
 
+n = calc_n(p,q)
+
 print "n = ", calc_n(p,q)
 
 e = int(input("Select e = "))
@@ -15,6 +17,8 @@ e = int(input("Select e = "))
 def calc_phi(n,p,q):
     phi = (p-1)*(q-1)
     return phi
+
+phi = calc_phi(n,p,q)
 
 k = int(input("Select integer k = "))
 
@@ -24,3 +28,25 @@ def private_key(n,phi,e,k):
 
 print "Public key n = ", calc_n(p,q)
 print "Private key d = ", private_key(n,phi,e,k)
+
+# encryption/decryption
+
+plaintext = raw_input("Enter plaintext: ")
+
+def convert_to_ascii(plaintext):
+    for char in plaintext:
+        num = ord(char)
+    return num
+
+num = convert_to_ascii(plaintext)
+
+def encrypt(num,e,n):
+    encrypted_data = (num**e) % n
+    return encrypted_data
+
+data = encrypt(num,e,n)
+
+print "Encrypted data = ", encrypt(num,e,n)
+
+def decrypt(data,d,n):
+    for 
