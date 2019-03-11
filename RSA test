@@ -8,11 +8,9 @@ pvk = input()
 print "Input text"
 plaintext = raw_input()
 
-def encrypt(plaintext):
-    cipher = "".join(str(ord(char)) for char in plaintext)
+def encrypt(pk, plaintext):
+    cipher = [chr((char**pk)%pvk) for char in plaintext)]
     return cipher
-
-c = encrypt(plaintext)
 
 def message_modulus(c):
     cm = (int(c)**pk)%pvk for int in c)
