@@ -19,22 +19,3 @@ def decrypt(pk, cipher):
 encrypted_msg = encrypt(pvk, plaintext)
 print ''.join(map(lambda x: str(x), encrypted_msg))
 print decrypt(pk, encrypted_msg)
-
-
-
-
-
-
-
-#output = []
-#for list1 in t:
-#    number = ord(list1) - 96
-#    output.append(number)
-
-#a = ''.join(str(e)for e in output)
-#print "a = ", a
-
-#c = int(a)**pk
-
-#m = c%pvk
-#print "m = ", m
