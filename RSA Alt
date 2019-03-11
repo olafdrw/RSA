@@ -1,2 +1,12 @@
 import time
 import math
+
+p = int(input("Select prime number P = "))
+q = int(input("Select prime number Q = "))
+
+def define_n(p,q):
+    n = p*q
+    return n
+
+print
+e = int(input("Select e = "))
