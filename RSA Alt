@@ -1,3 +1,6 @@
+
+# RSA Key generation, encryption and decryption
+
 import time
 import math
 
@@ -50,5 +53,3 @@ def decrypt(data,d,n):
 text = decrypt(data,d,n)
 
 print "Decrypted data = ", decrypt(data,d,n)
-
-# NOTE : YES!
