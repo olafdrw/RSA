@@ -1,9 +1,6 @@
 
 # RSA Key generation, encryption and decryption
 
-import time
-import math
-
 p = int(input("Select prime number p = "))
 q = int(input("Select prime number q = "))
 
