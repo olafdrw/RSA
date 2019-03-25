@@ -1,8 +1,14 @@
-
 # RSA Key generation, encryption and decryption
 
-p = int(input("Select prime number p = "))
-q = int(input("Select prime number q = "))
+import random
+import sympy
+
+minPrime = 7817
+maxPrime = 15485863
+cached_primes = [i for i in range(minPrime,maxPrime) if sympy.isprime(i)]
+
+p = random.choice([i for i in cached_primes])
+q = random.choice([i for i in cached_primes])
 
 def calc_n(p,q):
     n = p*q
