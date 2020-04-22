@@ -1,6 +1,5 @@
-
-p = int(input("Select prime number p = "))
-q = int(input("Select prime number q = "))
+# Olaf Willner, 2019
+# RSA Key generation, encryption and decryption
 
 def calc_n(p,q):
     n = p*q
@@ -34,7 +33,7 @@ print "Private key d = ", private_key(n,phi,e,k)
 plaintext = raw_input("Enter plaintext: ")
 
 def encrypt(e,n,plaintext):
-    data = [(ord(char)**e) % n for char in plaintext]
+    data = [pow(ord(char),key,n) for char in plaintext]
     return data
 
 data = encrypt(e,n,plaintext)
@@ -42,7 +41,7 @@ data = encrypt(e,n,plaintext)
 print "Encrypted data = ", encrypt(e,n,plaintext)
 
 def decrypt(data,d,n):
-    decrypted_data = [chr((char ** d) % n) for char in data]
+    decrypted_data = [chr(pow(char, key, n)) for char in ciphertext]
     return ''.join(decrypted_data)
 
 text = decrypt(data,d,n)
